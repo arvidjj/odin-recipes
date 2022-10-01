@@ -7,10 +7,17 @@ body {
 
 .row {
     display: grid;
+    margin-top: 50px;
+}
+
+.tCol1 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    padding: 30px;
 }
 
 .main {
-    grid-column: 3 / span 2;
+    grid-column: 4 / span 5;
     grid-row: 1;
     padding: 30px;
     background-color: white;
@@ -18,28 +25,47 @@ body {
     border-top: none;
 }
 
-.tCol1 {
-    grid-column: 1 / span 2;
+.tCol3 {
+    grid-column: 9 / span 3;
     grid-row: 1;
+    padding: 30px;
 }
 
-.tCol3 {
-    grid-column: 5 / span 2;
-    grid-row: 1;
+.indexBar {
+    display: flex;
+    background-color: darkorange;
+    border: solid 1px rgb(131, 72, 0);
+    color: white;
+    width: 100%;
+    padding-left: 10px; 
 }
 
 .bar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    display: flex;
     background-color: darkorange;
+    border: solid 1px rgb(131, 72, 0);
     color: white;
     width: 100%;
-    padding: 10px;
+    padding-left: 10px; 
+}
+
+.bar a {
+    text-decoration: none;
+    color: white;
+    display:flex;
+    align-items: center;
+}
+
+.bar a:hover {
+    transform: scale(1.2);
 }
 
 .center-content{
     display: flex;
-    text-align: center;
     align-items: center;
-    justify-content: center;
 }
 
 .recipeList {
@@ -78,6 +104,11 @@ body {
     color: #ccc;
 }
 
+.recipeDescriptionHeader {
+    display: flex;
+    align-items: center;
+}
+
 @media screen and (max-width: 950px) {
     .autoSize {
       display: none;
@@ -96,4 +127,36 @@ body {
 
 .recipeItem:hover {
     transform: scale(1.1);
+}
+
+.recipeHeader{
+
+}
+
+.recipeHeader h3{
+    text-align:center;
+}
+
+.recipeHeader img {
+    border: solid 1px #ccc;
+    border-radius:8px;
+    float:left;
+    margin: 15px;
+}
+
+.ogBox {
+    background-color: darkorange;
+    color: white;
+    border: solid 1px rgb(131, 72, 0);
+    border-radius:10px;
+    margin: 15px;
+    float:left;
+}
+
+.stepList li{
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius:10px;
 }
